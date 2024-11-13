@@ -1,0 +1,125 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8d7e1"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextN1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter number 1"
+        android:inputType="numberDecimal"
+        android:padding="14dp"
+        android:background="@android:drawable/editbox_background"
+        android:textColorHint="#8B7D82"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextN2"
+        app:layout_constraintWidth_percent="0.45"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/editTextN2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter number 2"
+        android:inputType="numberDecimal"
+        android:padding="14dp"
+        android:background="@android:drawable/editbox_background"
+        android:textColorHint="#8B7D82"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextN1"
+        app:layout_constraintStart_toEndOf="@+id/editTextN1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.45"
+        android:layout_marginEnd="16dp" />
+
+
+    <EditText
+        android:id="@+id/editTextNumAns"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Result"
+        android:focusable="false"
+        android:padding="14dp"
+        android:background="@android:drawable/editbox_background"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/editTextN1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="24dp"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <ImageButton
+        android:id="@+id/b_Add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/ic_add"
+        android:contentDescription="Add"
+        android:elevation="3dp"
+        app:layout_constraintEnd_toStartOf="@+id/b_Subtract"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumAns"
+        app:layout_constraintWidth_percent="0.48"
+        android:layout_marginTop="20dp" />
+
+
+    <ImageButton
+        android:id="@+id/b_Subtract"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/ic_subtract"
+        android:contentDescription="Subtract"
+        android:elevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/b_Add"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumAns"
+        app:layout_constraintWidth_percent="0.48"
+        android:layout_marginTop="20dp" />
+
+    <ImageButton
+        android:id="@+id/b_Multiply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/ic_multiply"
+        android:contentDescription="Multiply"
+        android:elevation="3dp"
+        app:layout_constraintEnd_toStartOf="@+id/b_Divide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_Add"
+        app:layout_constraintWidth_percent="0.48"
+        android:layout_marginTop="20dp" />
+
+    <ImageButton
+        android:id="@+id/b_Divide"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/ic_divide"
+        android:contentDescription="Divide"
+        android:elevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/b_Multiply"
+        app:layout_constraintTop_toBottomOf="@+id/b_Subtract"
+        app:layout_constraintWidth_percent="0.48"
+        android:layout_marginTop="20dp" />
+
+
+    <ImageView
+        android:id="@+id/nameGraphic"
+        android:layout_width="240dp"
+        android:layout_height="140dp"
+        android:src="@drawable/ic_alicia_logo"
+        android:contentDescription="App logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
